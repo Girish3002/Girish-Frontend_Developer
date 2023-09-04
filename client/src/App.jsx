@@ -23,7 +23,8 @@ function App() {
       }
       const queryString = queryParams.join("&");
       // let apiUrl = 'https://girish-frontend-developer-server.vercel.app/api/capsules';
-      let apiUrl = "http://localhost:3000/api/capsules";
+      let apiUrl =
+        "https://girish-frontend-developer-server.vercel.app/api/capsules";
 
       if (queryString) {
         apiUrl += `?${queryString}`;

@@ -1,0 +1,72 @@
+.data-grid {
+  background-color: rgb(0, 0, 0);
+  padding-block: 50px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-direction: column;
+  .data-section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    justify-content: end;
+    .no-data {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      width: 100vw;
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .pagination button:hover {
+    background-color: rgb(186, 124, 11);
+  }
+
+  .pagination button:disabled {
+    background-color: #686868;
+    cursor: not-allowed;
+  }
+
+  .pagination span {
+    font-size: 16px;
+    margin: 0 10px;
+    color: white;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .data-grid {
+    .data-section {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .data-grid {
+    .data-section {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
